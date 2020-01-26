@@ -7,5 +7,6 @@ So the Bot is made in JavaScript and the other Giveaway Bot was written in Java.
 to make giveaway Bot.**
 
 # Links
-- [Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=606587080042086420&permissions=8&scope=bot)
-- [Support Server Link](https://discord.gg/wjBJJUY)
+- 🔗 [Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=606587080042086420&permissions=8&scope=bot)
+- 😎 Support Server Link](https://discord.gg/wjBJJUY)
+- 📃 [Commands](https://github.com/Zaid-maker/-Official-Giveaway-Bot-/blob/master/AVAILABLE_COMMANDS.md)
