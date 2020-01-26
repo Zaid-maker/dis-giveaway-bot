@@ -1,5 +1,5 @@
 # Official-Giveaway-Bot
-**This is the official giveaway to hold giveaways in your server fast and easy.**
+**Giveaway Bot is a Light-weight and easy to use Discord Bot written in JavaScript built using NodeJS and discord.js Framework**
 
 # How the Bot works.
 **I have made this bot Using discord-giveaway package made by Androz. one of the developer i follow.
@@ -7,4 +7,5 @@ So the Bot is made in JavaScript and the other Giveaway Bot was written in Java.
 to make giveaway Bot.**
 
 # Links
-
+- [Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=606587080042086420&permissions=8&scope=bot)
+- [Support Server Link](https://discord.gg/wjBJJUY)
