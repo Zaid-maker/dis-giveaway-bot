@@ -9,7 +9,7 @@
   "author": "DevMirza",
   "license": "ISC",
   "dependencies": {
-    "discord-giveaways": "^3.0.12",
+    "discord-giveaways": "^3.0.13",
     "discord.js": "^11.5.1",
     "ms": "^2.1.2"
   }
