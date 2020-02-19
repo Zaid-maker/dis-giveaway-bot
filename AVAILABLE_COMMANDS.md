@@ -2,7 +2,10 @@
 **The default prefix for this bot is `g!`.**
 
 # 🔨Commands
-- **start-giveaway [channel name] [Time] [Winners] [Prize]**
-- **reroll-giveaway [messageID]**
-- **end-giveaway [messageID]**
-- **invite**
+- **start [channel name] [Time] [Winners] [Prize]**
+- **reroll [messageID] or [Prize name]**
+- **end [messageID] or [prize Name]**
+- **invite command**
+- **ping command**
+- **help command**
+- **stats command**
