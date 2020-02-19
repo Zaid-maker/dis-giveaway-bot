@@ -6,6 +6,9 @@
 So the Bot is made in JavaScript and the other Giveaway Bot was written in Java. so i have decided 
 to make giveaway Bot.**
 
+# Status
+[![Discord Bots](https://top.gg/api/widget/status/606587080042086420.svg)](https://top.gg/bot/606587080042086420)
+
 # Links
 - 🔗 [Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=606587080042086420&permissions=8&scope=bot)
 - 😎 [Support Server Link](https://discord.gg/wjBJJUY)
