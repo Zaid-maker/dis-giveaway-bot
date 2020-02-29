@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord-giveaways": "^3.2.1",
-    "discord.js": "^11.5.1",
+    "discord.js": "^11.6.1",
     "ms": "^2.1.2"
   }
 }
