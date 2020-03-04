@@ -9,7 +9,7 @@ to make giveaway Bot.**
 # Status 
 [![Discord Bots](https://top.gg/api/widget/status/606587080042086420.svg)](https://top.gg/bot/606587080042086420)
 [![Discord Bots](https://top.gg/api/widget/servers/606587080042086420.svg)](https://top.gg/bot/606587080042086420)
-[![Discord Bots](https://top.gg/api/widget/upvotes/606587080042086420.svg)](https://top.gg/bot/606587080042086420)
+[![Discord Bots](https://top.gg/api/widget/upvotes/606587080042086420.svg)](https://top.gg/bot/606587080042086420) [![Greenkeeper badge](https://badges.greenkeeper.io/Zaid-maker/Official-Giveaway-Bot.svg)](https://greenkeeper.io/)
 
 # Links
 - 🔗 [Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=606587080042086420&permissions=8&scope=bot)
