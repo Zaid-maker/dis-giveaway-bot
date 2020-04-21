@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Invite Link", "[Click here to invite me](https://discordapp.com/api/oauth2/authorize?client_id=606587080042086420&permissions=8&scope=bot)")
     .addField("Support Server", "[Click to join support Server](https://discord.gg/wjBJJUY)")
     .setTimestamp()
-    .setFooter(`Requested by ${message.aurhor.tag}`, client.user.displayAvatarURL())
+    .setFooter(`Requested by ${message.author.tag}`, client.user.displayAvatarURL())
     message.channel.send(invite);
 }
 
