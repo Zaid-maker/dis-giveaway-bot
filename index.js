@@ -1,8 +1,3 @@
-/**
- * Code made my Androz2091
- * ==========================
- * CopyRight © 2020 | All rights are Reserved.
- */
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
