@@ -12,3 +12,4 @@
 - 📃 [Commands](https://github.com/Zaid-maker/-Official-Giveaway-Bot-/blob/master/AVAILABLE_COMMANDS.md)
 
 # Copyright 
+Copyright 2020 © All RIghts are Reserved | If you are using any part of code please give me credits. Thanks
