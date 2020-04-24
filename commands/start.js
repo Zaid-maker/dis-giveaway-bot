@@ -45,7 +45,7 @@ exports.run = async (client, message, args) => {
         winnerCount: giveawayNumberWinners,
       // Messages
         messages: {
-            giveaway: (client.config.everyoneMention ? "@everyone\n\n" : "")+"🎉🎉 **GIVEAWAY** 🎉🎉",
+            giveaway: (client.config.everyoneMention ? "@everyone\n" : "")+"🎉🎉 **GIVEAWAY** 🎉🎉",
             giveawayEnded: (client.config.everyoneMention ? "@everyone\n\n" : "")+"🎉🎉 **GIVEAWAY ENDED** 🎉🎉",
             timeRemaining: "Time remaining: **{duration}**!",
             inviteToParticipate: "React with 🎉 to participate!",
