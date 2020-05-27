@@ -21,3 +21,7 @@ module.exports.run = async (client, message, args) => {
 
     return message.author.send(help);
 }
+
+module.exports.help = {
+  name: "help"
+}
