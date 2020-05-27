@@ -9,16 +9,17 @@ module.exports.run = async (client, message, args) => {
     let servercount = client.guilds.cache.size;
     let usercount = client.users.cache.size;
     let channelscount = client.channels.cache.size;
-    let shards = shard.id;
 
     let stats = new Discord.MessageEmbed()
-    .setTitile("Statsistics of the Bot!")
+    .setTitle(`Statistics of ${client.user.username}`)
+    .setColor('BLUE')
     .addField("Server Count", `${servercount}`)
     .addField("Users Count", `${usercount}`)
     .addField("Channel's Count", `${channelscount}`)
-    .addField("Shards", `${shards}`)
-    .addField("Hosted Plateform", "Hosted on Glitch 24/7")
-    message.channl.send(stats);
+    .addField("Hosted Platform", "Hosting on Glitch with 99% uptime")
+    .setTimestamp()
+    .setFooter(`${message.author.tag}`, message.author.displayAvatarURL());
+    message.channel.send(stats);
 };
 
 module.exports.help = {
