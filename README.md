@@ -1,5 +1,5 @@
-# Official-Giveaway-Bot
-**Giveaway Bot is a Light-weight and easy to use Discord Bot written in JavaScript built using NodeJS and discord.js Framework**
+# Official-Giveaways-Bot
+GiveawaysBot allowa you to conduct giveaways in your discord server with lightning fast speed. 
 
 # Status 
 [![Discord Bots](https://top.gg/api/widget/status/606587080042086420.svg)](https://top.gg/bot/606587080042086420)
