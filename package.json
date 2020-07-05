@@ -4,13 +4,14 @@
   "description": "My First Ever Giveaway bot made with JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js"
   },
   "author": "DevMirza",
   "license": "ISC",
   "dependencies": {
     "discord-giveaways": "^4.2.1",
     "discord.js": "^12.2.0",
-    "ms": "^2.1.2"
+    "ms": "^2.1.2",
+    "beautify": "0.0.8"
   }
 }
