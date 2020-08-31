@@ -1,4 +1,4 @@
-# Official-Giveaways-Bot
+# 🎁 Official-Giveaways-Bot ⚡
 GiveawaysBot allowa you to conduct giveaways in your discord server with lightning fast speed. 
 
 # Status 
