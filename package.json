@@ -1,13 +1,21 @@
 {
   "name": "giveaway-bot",
   "version": "1.0.0",
-  "description": "My First Ever Giveaway bot made with JavaScript.",
+  "description": "My First Ever Giveaway bot created with discord-giveaways package in javascript.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "author": "DevMirza",
   "license": "ISC",
+  "keywords": [
+    "discord",
+    "giveaways",
+    "giveaway",
+    "bot",
+    "discord.js",
+    "discordjs"
+  ],
   "dependencies": {
     "discord-giveaways": "^4.2.1",
     "discord.js": "^12.3.1",
