@@ -3,7 +3,7 @@ const ms = require('ms');
 exports.run = async (client, message, args) => {
 
     // If the member doesn't have enough permissions
-    if(!message.member.hasPermission('MANAGE_MESSAGES')){
+    if(!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")){
         return message.channel.send(':x: You need to have the manage messages permissions to start giveaways.');
     }
 
@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
     // Number of winners
     let giveawayNumberWinners = args[2];
     // If the specified number of winners is not a number
-    if(isNaN(giveawayNumberWinners)){
+    if(isNaN(giveawayNumberWinners) || (parseInt(giveawayNumberWinners) <= 0)){
         return message.channel.send(':x: You have to specify a valid number of winners!');
     }
 
@@ -43,15 +43,18 @@ exports.run = async (client, message, args) => {
         prize: giveawayPrize,
         // The giveaway winner count
         winnerCount: giveawayNumberWinners,
-      // Messages
+        // Who hosts this giveaway
+        hostedBy: client.config.hostedBy ? message.author : null,
+        // Messages
         messages: {
-            giveaway: (client.config.everyoneMention ? "@everyone\n" : "")+"🎉🎉 **GIVEAWAY** 🎉🎉",
+            giveaway: (client.config.everyoneMention ? "@everyone\n\n" : "")+"🎉🎉 **GIVEAWAY** 🎉🎉",
             giveawayEnded: (client.config.everyoneMention ? "@everyone\n\n" : "")+"🎉🎉 **GIVEAWAY ENDED** 🎉🎉",
             timeRemaining: "Time remaining: **{duration}**!",
             inviteToParticipate: "React with 🎉 to participate!",
             winMessage: "Congratulations, {winners}! You won **{prize}**!",
             embedFooter: "Giveaways",
             noWinner: "Giveaway cancelled, no valid participations.",
+            hostedBy: "Hosted by: {user}",
             winners: "winner(s)",
             endedAt: "Ended at",
             units: {
