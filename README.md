@@ -1,5 +1,5 @@
 # 🎁 Official-Giveaways-Bot ⚡
-GiveawaysBot allowa you to conduct giveaways in your discord server with lightning fast speed. 
+GiveawaysBot allows you to conduct giveaways in your discord server with lightning fast speed. 
 
 ## Directly run the code on repl.it
 [![Run on Repl.it](https://repl.it/badge/github/Zaid-maker/official-giveaway-bot)](https://repl.it/github/Zaid-maker/official-giveaway-bot)
