@@ -2,5 +2,6 @@
   "token": "Discord token",
   "prefix": "g!",
   "everyoneMention": true,
-  "hostedBy": true
+  "hostedBy": true,
+  "mongodb_url": "Your-mongodb-cluster-url"
 }
