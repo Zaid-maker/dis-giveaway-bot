@@ -8,14 +8,16 @@ module.exports.run = async (client, message, args) => {
   
   if(!message.content.startsWith(prefix)) return;
   
-  const m = await message.channel.send("Hold on .....")
+  const m = await message.channel.send("Hold on......")
   
   let pong = new Discord.MessageEmbed()
   .setTitle("🏓 Pong!")
-  .setColor('RANDOM')
+  .setColor("DARK BLUE")
   .setTimestamp()
-  .addField("Latency", `${m.createdTimestamp - message.createdTimestamp}ms`, true)
-  .addField("API Latency", `${Math.round(client.ws.ping)}ms`, true)
+  .addFields(
+    {name: 'Message Response Time', value: `${m.createdTimestamp - message.createdTimestamp}ms`, inline: true},
+    {name: 'Client Ping', value: `${Math.round(client.ws.ping)}ms`}
+  )
   .setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL());
 
   m.edit(pong)

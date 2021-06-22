@@ -22,7 +22,7 @@
     "discord.js": "^12.5.1",
     "ms": "^2.1.3",
     "os": "^0.1.1",
-    "quickmongo": "3.0.0",
-    "quickdb": "1.0.5"
+    "quickdb": "1.0.5",
+    "quickmongo": "3.0.0"
   }
 }

@@ -20,14 +20,17 @@ module.exports.run = async (client, message, args) => {
     .setAuthor('DevMirza')
     .setTitle(`Statistics of ${client.user.username}`)
     .setColor('BLUE')
-    .addField("Server Count", `${servercount}`, true)
-    .addField("Users Count", `${usercount}`, true)
-    .addField("Channel's Count", `${channelscount}`, true)
-    .addField('Architecture', `${arch}`, true)
-    .addField('Platform', `${platform}`, true)
-    .addField('Node-Version', `${NodeVersion}`, true)
-    .addField('Shards', `${shard}`, true)
-    .addField('Cores', `${cores}`, true)
+    .addFields(
+        {name: "Server's Count", value: `${servercount}`, inline: true},
+        {name: "User's Count", value: `${usercount}`, inline: true},
+        {name: "Channel's Count", value: `${channelscount}`, inline: true},
+        {name: "Architecture", value: `${arch}`, inline: true},
+        {name: "Platform", value: `${platform}`, inline: true},
+        {name: "Nodejs Version", value: `${NodeVersion}`, inline: true},
+        {name: "Shard's", value: `${shard}`, inline: true},
+        {name: "Core's", value: `${cores}`, inline: true}
+
+    )
     .setTimestamp()
     .setFooter(`${message.author.tag}`, message.author.displayAvatarURL());
     message.channel.send(stats);
