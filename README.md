@@ -16,4 +16,4 @@ DisGiveawaysBot allows you to conduct giveaways in your discord server with ligh
 `node .`
 
 ## Copyright 
-Copyright 2020 © All Rights are Reserved | If you are using any part of code please give me credits. Thanks
+Copyright 2020 © All Rights are Reserved
