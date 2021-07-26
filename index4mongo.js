@@ -9,8 +9,12 @@ client.config = config;
 // Load quickmongo.
 const { Database } = require('quickmongo');
 const db = new Database(`${config.mongodb_url}`);
+
+// check the DB when it's ready.
 db.once('ready', async () => {
-    if ((await db.get('giveaways')) === null) await db.set('giveaways', []);
+    if (!Array.isArray(await db.get('giveaways')) === null) await db.set('giveaways', []);
+    // start the manager only if the db got checked to prevent an error.
+    client.giveawaysManager._init();
     console.log('SUCCESS!');
 });
 
@@ -56,15 +60,16 @@ class GiveawayManagerWithOwnDatabase extends GiveawaysManager {
     }
 }
 
+// Create a new instance of your new class
 const manager = new GiveawayManagerWithOwnDatabase(client, {
-    storage: false,
-    updateCountdownEvery: 5000,
+    updateCountdownEvery: 10000,
     default: {
         botsCanWin: false,
-        embedColor: "#FF0000",
-        reaction: "🎉"
+        embedColor: '#FF0000',
+        embedColorEnd: '#000000',
+        reaction: '🎉'
     }
-});
+}, false)
 
 client.giveawaysManager = manager;
 
