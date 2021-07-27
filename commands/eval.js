@@ -7,23 +7,23 @@ module.exports.run = async (client, message, args) => {
   if (message.author.bot) return;
     let prefix = config.prefix;
     if(!message.content.startsWith(prefix)) return;
-  
+
   if (message.author.id !== "414075055023063040") {
     return message.channel.send(":fingers_crossed: Forbidden: This Command is Owner-Only!")
   }
-  
+
   if (!args[0]) {
     message.channel.send("You need to evaluate _**SOMETHING**_ Please!")
   }
-  
+
   try {
     if (args.join(" ").toLowerCase().includes("token")) {
       return;
     }
-    
+
     const toEval = args.join(" ");
     const evaluated = eval(toEval);
-    
+
     let embed = new Discord.MessageEmbed()
     .setTitle("Eval")
     .addField("ToEvaluate", `\`\`\`js\n${Beautify(args.join(" "), { format: "js" })}\n\`\`\``)
@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
     .setTimestamp()
     .setFooter(`${message.author.tag}`, client.user.displayAvatarURL())
     message.channel.send(embed);
-    
+
   } catch (e) {
     let errorembed = new Discord.MessageEmbed()
     .addField("\:x: Error!")
