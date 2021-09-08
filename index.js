@@ -16,11 +16,16 @@ client.config = config;
 const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
     storage: "./database.json",
-    updateCountdownEvery: 5000,
     default: {
         botsCanWin: false,
         embedColor: "#FF0000",
-        reaction: "🎉"
+        reaction: "🎉",
+        lastChance: {
+            enabled: true,
+            content: '⚠️ **LAST CHANCE TO ENTER !** ⚠️',
+            threshold: 5000,
+            embedColor: '#FF0000'
+        }
     }
 });
 
