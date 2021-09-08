@@ -7,7 +7,7 @@ DisGiveawaysBot allows you to conduct giveaways in your discord server with ligh
 ## Links
 - 🔗 [Invite Link](https://discord.com/api/oauth2/authorize?client_id=854736126229086218&permissions=8&scope=bot)
 - 😎 [Support Server Link](https://discord.gg/teSVjNq6fd)
-- 📃 [Commands](https://github.com/Zaid-maker/dis-giveaway-bot-/blob/master/AVAILABLE_COMMANDS.md)
+- 📃 [Commands](https://github.com/Zaid-maker/dis-giveaway-bot/blob/master/AVAILABLE_COMMANDS.md)
 - 🌏 [Website](https://zaid-maker.github.io/givesawaysbot.github.io)
 
 ## Setup
