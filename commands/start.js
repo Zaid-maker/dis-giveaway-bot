@@ -1,8 +1,10 @@
 const ms = require('ms');
-const message = require('../utils/message');
+const messages = require("../utils/messages");
 
 module.exports = {
-    description: 'Starts a giveaway.',
+
+    description: 'Start a giveaway',
+
     options: [
         {
             name: 'duration',
@@ -31,14 +33,15 @@ module.exports = {
     ],
 
     run: async (client, interaction) => {
+
         // If the member doesn't have enough permissions
-        if(!interaction.member.permission.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")){
+        if(!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")){
             return interaction.reply({
                 content: ':x: You need to have the manage messages permissions to start giveaways.',
                 ephemeral: true
             });
         }
-
+    
         const giveawayChannel = interaction.options.getChannel('channel');
         const giveawayDuration = interaction.options.getString('duration');
         const giveawayWinnerCount = interaction.options.getInteger('winners');
@@ -50,7 +53,7 @@ module.exports = {
                 ephemeral: true
             });
         }
-
+    
         // Start the giveaway
         client.giveawaysManager.start(giveawayChannel, {
             // The giveaway duration
@@ -64,7 +67,9 @@ module.exports = {
             // Messages
             messages
         });
-
+    
         interaction.reply(`Giveaway started in ${giveawayChannel}!`);
-    }
+    
+    } 
+
 };
