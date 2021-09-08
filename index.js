@@ -12,6 +12,8 @@ const client = new Discord.Client({
 const config = require('./config.json');
 client.config = config;
 
+const synchronizeSlashCommands = require('discord-sync-commands');
+
 // Init discord giveaways
 const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
@@ -43,6 +45,7 @@ client.giveawaysManager.on("giveawayEnded", (giveaway, winners) => {
 });
 
 /* Load all events */
+client.commands = new Discord.Collection();
 fs.readdir("./events/", (_err, files) => {
     files.forEach((file) => {
         if (!file.endsWith(".js")) return;
@@ -54,17 +57,26 @@ fs.readdir("./events/", (_err, files) => {
     });
 });
 
-client.commands = new Discord.Collection();
-
 /* Load all commands */
 fs.readdir("./commands/", (_err, files) => {
     files.forEach((file) => {
         if (!file.endsWith(".js")) return;
         let props = require(`./commands/${file}`);
         let commandName = file.split(".")[0];
-        client.commands.set(commandName, props);
+        client.commands.set(commandName, {
+            name: commandName,
+            ...props
+        });
         console.log(`👌 Command loaded: ${commandName}`);
     });
+    synchronizeSlashCommands(client, client.commands.map((c) => ({
+        name: c.name,
+        description: c.description,
+        options: c.options,
+        type: 'CHAT_INPUT'
+    })), {
+        debug: true
+    })
 });
 
 // Login
