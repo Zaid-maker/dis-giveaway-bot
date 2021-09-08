@@ -12,7 +12,9 @@ DisGiveawaysBot allows you to conduct giveaways in your discord server with ligh
 
 ## Setup
 `npm i`</br>
-`Fill the configurations`</br>
+`Pick a database from Database exaples folders`</br>
+`just copy it and paste it in to index file.`</br>
+`Fill the configurations.`</br>
 `node .`
 
 ## Copyright
