@@ -76,7 +76,7 @@ fs.readdir("./commands/", (_err, files) => {
         type: 'CHAT_INPUT'
     })), {
         debug: true
-    })
+    });
 });
 
 // Login
