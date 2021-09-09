@@ -17,7 +17,7 @@ const synchronizeSlashCommands = require('discord-sync-commands');
 // Init discord giveaways
 const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
-    storage: "./database.json",
+    storage: "./giveaways.json",
     default: {
         botsCanWin: false,
         embedColor: "#FF0000",
@@ -30,7 +30,6 @@ client.giveawaysManager = new GiveawaysManager(client, {
         }
     }
 });
-
 // We now have a client.giveawaysManager property to manage our giveaways!
 
 client.giveawaysManager.on("giveawayReactionAdded", (giveaway, member, reaction) => {
@@ -45,20 +44,8 @@ client.giveawaysManager.on("giveawayEnded", (giveaway, winners) => {
     console.log(`Giveaway #${giveaway.messageId} ended! Winners: ${winners.map((member) => member.user.username).join(', ')}`);
 });
 
-/* Load all events */
-client.commands = new Discord.Collection();
-fs.readdir("./events/", (_err, files) => {
-    files.forEach((file) => {
-        if (!file.endsWith(".js")) return;
-        const event = require(`./events/${file}`);
-        let eventName = file.split(".")[0];
-        console.log(`👌 Event loaded: ${eventName}`);
-        client.on(eventName, event.bind(null, client));
-        delete require.cache[require.resolve(`./events/${file}`)];
-    });
-});
-
 /* Load all commands */
+client.commands = new Discord.Collection();
 fs.readdir("./commands/", (_err, files) => {
     files.forEach((file) => {
         if (!file.endsWith(".js")) return;
@@ -76,7 +63,20 @@ fs.readdir("./commands/", (_err, files) => {
         options: c.options,
         type: 'CHAT_INPUT'
     })), {
-        debug: true
+        debug: true,
+        guildId: config.guildId
+    });
+});
+
+/* Load all events */
+fs.readdir("./events/", (_err, files) => {
+    files.forEach((file) => {
+        if (!file.endsWith(".js")) return;
+        const event = require(`./events/${file}`);
+        let eventName = file.split(".")[0];
+        console.log(`👌 Event loaded: ${eventName}`);
+        client.on(eventName, event.bind(null, client));
+        delete require.cache[require.resolve(`./events/${file}`)];
     });
 });
 

@@ -1,7 +1,6 @@
 {
   "token": "Discord token",
-  "prefix": "dis!",
   "everyoneMention": true,
   "hostedBy": true,
-  "mongodb_url": "Your-mongodb-cluster-url"
+  "guildId": ""
 }
