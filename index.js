@@ -63,8 +63,7 @@ fs.readdir("./commands/", (_err, files) => {
         options: c.options,
         type: 'CHAT_INPUT'
     })), {
-        debug: true,
-        guildId: config.guildId
+        debug: true
     });
 });
 

@@ -1,6 +1,5 @@
 {
   "token": "Discord Bot Token",
   "everyoneMention": true,
-  "hostedBy": true,
-  "guildId": "854736321745649694"
+  "hostedBy": true
 }
