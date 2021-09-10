@@ -1,16 +1,13 @@
 const Discord = require("discord.js");
-const config = require("../config.json");
 
-module.exports.run = async (client, message, args) => {
-  if (message.author.bot) return;
+module.exports = {
+  description: 'Tells bot client latency.',
 
-  let prefix = config.prefix;
+  run: async (client, interaction) => {
 
-  if (!message.content.startsWith(prefix)) return;
+    const m = await interaction.reply("Hold on......");
 
-  const m = await message.channel.send("Hold on......");
-
-  let pong = new Discord.MessageEmbed()
+    let pong = new Discord.MessageEmbed()
     .setTitle("🏓 Pong!")
     .setColor("DARK BLUE")
     .setTimestamp()
@@ -27,5 +24,6 @@ module.exports.run = async (client, message, args) => {
       message.author.displayAvatarURL()
     );
 
-  m.edit(pong);
+    m.edit(pong);
+  }
 };
