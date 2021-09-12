@@ -1,5 +1,5 @@
 # 🎁 Dis-Giveaways-Bot ⚡
-DisGiveawaysBot allows you to conduct giveaways in your discord server with lightning fast speed.
+DisGiveawaysBot allows you to conduct giveaways in your discord server with lightning fast speed and now the bot supports slash commands.
 
 ## Directly run the code on repl.it
 [![Run on Repl.it](https://repl.it/badge/github/Zaid-maker/dis-giveaway-bot)](https://repl.it/github/Zaid-maker/dis-giveaway-bot)
