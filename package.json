@@ -4,7 +4,8 @@
   "description": "My First Ever Giveaway bot created with discord-giveaways package in javascript.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "DevMirza",
   "license": "ISC",
@@ -28,5 +29,8 @@
   },
   "engines": {
     "node": "16.x"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
