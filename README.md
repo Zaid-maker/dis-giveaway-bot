@@ -1,6 +1,11 @@
 # 🎁 Dis-Giveaways-Bot ⚡
 DisGiveawaysBot allows you to conduct giveaways in your discord server with lightning fast speed and now the bot supports slash commands.
 
+## Requirements
+`Bot needa v16 of nodejs to work`</br>
+`Invite ur bot with bot and applications.commands scope`</br>
+`Bot only uses slash commands, message content no longer exists.`
+
 ## Directly run the code on repl.it
 [![Run on Repl.it](https://repl.it/badge/github/Zaid-maker/dis-giveaway-bot)](https://repl.it/github/Zaid-maker/dis-giveaway-bot)
 
