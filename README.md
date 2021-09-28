@@ -2,7 +2,7 @@
 DisGiveawaysBot allows you to conduct giveaways in your discord server with lightning fast speed and now the bot supports slash commands.
 
 ## Requirements
-`Bot needa v16 of nodejs to work`</br>
+`Bot needs v16 of nodejs to work`</br>
 `Invite ur bot with bot and applications.commands scope`</br>
 `Bot only uses slash commands, message content no longer exists.`
 
