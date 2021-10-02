@@ -6,6 +6,13 @@ DisGiveawaysBot allows you to conduct giveaways in your discord server with ligh
 `Invite ur bot with bot and applications.commands scope`</br>
 `Bot only uses slash commands, message content no longer exists.`
 
+## Features
+`Lightning fast giveaways created using best databases, like: mongodb, quick.db,.etc`</br>
+`LAST CHANCE TO ENTER warning when giveaway about to end.`</br>
+`Slash commands for faster giveaway creating.`</br>
+`Drop giveaway ability, drop giveaway anytime in your server with drop command.`</br>
+`Pasue and Un-Pasuse giveaway feature.`
+
 ## Directly run the code on repl.it
 [![Run on Repl.it](https://repl.it/badge/github/Zaid-maker/dis-giveaway-bot)](https://repl.it/github/Zaid-maker/dis-giveaway-bot)
 
