@@ -8,12 +8,12 @@ const client = new Discord.Client({
     ]
 });
 
-const config = require('../config.json');
+const config = require('./config.json');
 client.config = config;
 
 // Load quickmongo.
 const { Database } = require('quickmongo');
-const db = new Database(`${config.mongodb_url}`);
+const db = new Database(config.mongodb_url);
 
 // Check the DB when it is ready
 db.on('ready', async () => {
