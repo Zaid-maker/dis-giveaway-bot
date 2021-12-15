@@ -11,7 +11,7 @@ DisGiveawaysBot allows you to conduct giveaways in your discord server with ligh
  - LAST CHANCE TO ENTER warning when giveaway is about to end.
  - Slash commands for faster and simpler giveaway creating.
  - Drop giveaway ability, drop giveaway anytime in your server with drop command.
- - Pasue and un-Pasuse giveaway feature.
+ - Pause and un-pause giveaways.
 
 ## Links
 - 🔗 [Invite Link](https://discord.com/api/oauth2/authorize?client_id=854736126229086218&permissions=8&scope=bot)
