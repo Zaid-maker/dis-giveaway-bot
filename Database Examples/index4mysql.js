@@ -8,6 +8,7 @@ const client = new Client({
         Intents.FLAGS.GUILD_MESSAGE_REACTIONS
     ]
 });
+const config = require('../config.json');
 client.config = config;
 
 // Load mysql
