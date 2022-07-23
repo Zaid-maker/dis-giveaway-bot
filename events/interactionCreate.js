@@ -1,13 +1,13 @@
 module.exports = (client, interaction) => {
+  if (!interaction.isCommand()) return;
 
-    if (!interaction.isCommand()) return;
+  const command = client.commands.get(interaction.commandName);
 
-    const command = client.commands.get(interaction.commandName);
-
-    if (!command) return void interaction.reply({
-        content: `Command \`${interaction.commandName}\` not found.`,
-        ephemeral: true
+  if (!command)
+    return void interaction.reply({
+      content: `Command \`${interaction.commandName}\` not found.`,
+      ephemeral: true,
     });
-  
-    command.run(client, interaction);
+
+  command.run(client, interaction);
 };
