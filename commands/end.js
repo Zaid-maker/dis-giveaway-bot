@@ -1,4 +1,4 @@
-const ms = require("ms");
+const Discord = require("discord.js");
 
 module.exports = {
   description: "End a giveaway",
@@ -7,7 +7,7 @@ module.exports = {
     {
       name: "giveaway",
       description: "The giveaway to end (message ID or giveaway prize)",
-      type: "STRING",
+      type: Discord.ApplicationCommandOptionType.String,
       required: true,
     },
   ],
