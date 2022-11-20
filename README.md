@@ -1,4 +1,4 @@
-# 🎁 Dis-Giveaways-Bot ⚡
+# 🎁 Dis-Giveaways-Bot ⚡ [![Run on Repl.it](https://repl.it/badge/github/Zaid-maker/dis-giveaway-bot)](https://repl.it/github/Zaid-maker/dis-giveaway-bot)
 
 DisGiveawaysBot allows you to conduct giveaways in your discord server with lightning fast speed and now the bot supports slash commands.
 
@@ -36,16 +36,12 @@ DisGiveawaysBot allows you to conduct giveaways in your discord server with ligh
 
 - Read the [README](Database%20Examples/README.md) file and you are good to go to use custom db's.
 
-## Directly run the code on repl.it
-
-[![Run on Repl.it](https://repl.it/badge/github/Zaid-maker/dis-giveaway-bot)](https://repl.it/github/Zaid-maker/dis-giveaway-bot)
-
 ## Manual setup on local machine
 
 - Run command `npm i`
 - Pick a database from `Database Examples` folder and copy it to `index.js` file.
 - Fill the configurations.
-- Run command `node .`
+- Run command `npm run start`
 
 ## Credits
 
