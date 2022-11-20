@@ -1,5 +1,5 @@
 module.exports = (client, interaction) => {
-  if (!interaction.isCommand()) return;
+  if (!interaction.isChatInputCommand()) return;
 
   const command = client.commands.get(interaction.commandName);
 
