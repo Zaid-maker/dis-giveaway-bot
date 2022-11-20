@@ -1,11 +1,11 @@
 const messages = require("../utils/messages");
-const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
+const { EmbedBuilder, MessageActionRow, MessageButton } = require("discord.js");
 
 module.exports = {
   name: "invite",
   description: "Get Invite Link for DisGiveaway",
   run: async (client, interaction) => {
-    let invite = new MessageEmbed()
+    let invite = new EmbedBuilder()
       .setTitle(`${interaction.user.tag}`)
       .setDescription("You can invite the bot by clicking on the below button.")
       .setColor("#2f3136")

@@ -1,5 +1,5 @@
 const messages = require("../utils/messages");
-const { MessageEmbed } = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
   name: "ping",
@@ -20,7 +20,7 @@ module.exports = {
       red: "<:dnd:903711513066487851>",
     };
 
-    let botping = new MessageEmbed()
+    let botping = new EmbedBuilder()
       .setTitle(`${client.user.username} Ping`)
       .setColor("2f3136")
       .addFields({

@@ -1,5 +1,5 @@
 const os = require("os");
-const { MessageEmbed } = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 const feroms = require("fero-ms");
 
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
     let user = client.users.cache.size;
     let channel = client.channels.cache.size;
 
-    let statsembed = new MessageEmbed()
+    let statsembed = new EmbedBuilder()
       .addFields(
         {
           name: "<:live2:896715171882500106> I have been online for?",

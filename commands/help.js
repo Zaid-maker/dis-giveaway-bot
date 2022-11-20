@@ -1,11 +1,11 @@
 const messages = require("../utils/messages");
-const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
+const { EmbedBuilder, MessageActionRow, MessageButton } = require("discord.js");
 
 module.exports = {
   name: "help",
   description: "Get all Bot Commands",
   run: async (client, interaction) => {
-    let helpembed = new MessageEmbed();
+    let helpembed = new EmbedBuilder();
     helpembed.setColor("RANDOM");
     helpembed.setAuthor({ name: `Commands of ${client.user.username}` });
     helpembed.setColor("#2f3136");
