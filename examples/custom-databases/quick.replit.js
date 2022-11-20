@@ -1,30 +1,22 @@
-const fs = require("fs");
-
-const { Client, Intents } = require("discord.js");
-const client = new Client({
+const Discord = require("discord.js");
+const client = new Discord.Client({
   intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+    Discord.IntentsBitField.Flags.Guilds,
+    Discord.IntentsBitField.Flags.GuildMessageReactions,
   ],
 });
 
-const config = require("./config.json");
-client.config = config;
-
-// Load quickmongo.
-const { Database } = require("quickmongo");
-const db = new Database(config.mongodb_url);
+// Load quick.replit
+const { Database } = require("quick.replit");
+const db = new Database();
 
 // Check the DB when it is ready
-db.on("ready", async () => {
+db.once("ready", async () => {
   if (!Array.isArray(await db.get("giveaways"))) await db.set("giveaways", []);
   // Start the manager only after the DB got checked to prevent an error
   client.giveawaysManager._init();
-  console.log("SUCCESS!");
 });
 
-// Init discord giveaways
 const { GiveawaysManager } = require("discord-giveaways");
 const GiveawayManagerWithOwnDatabase = class extends GiveawaysManager {
   // This function is called when the manager needs to get all giveaways which are stored in the database.
@@ -84,48 +76,12 @@ const manager = new GiveawayManagerWithOwnDatabase(
     },
   },
   false
-);
-
+); // ATTENTION: Add "false" in order to not start the manager until the DB got checked, see below
+// We now have a giveawaysManager property to access the manager everywhere!
 client.giveawaysManager = manager;
 
-/* Load all commands */
-client.commands = new Discord.Collection();
-fs.readdir("./commands/", (_err, files) => {
-  files.forEach((file) => {
-    if (!file.endsWith(".js")) return;
-    let props = require(`./commands/${file}`);
-    let commandName = file.split(".")[0];
-    client.commands.set(commandName, {
-      name: commandName,
-      ...props,
-    });
-    console.log(`👌 Command loaded: ${commandName}`);
-  });
-  synchronizeSlashCommands(
-    client,
-    client.commands.map((c) => ({
-      name: c.name,
-      description: c.description,
-      options: c.options,
-      type: "CHAT_INPUT",
-    })),
-    {
-      debug: true,
-    }
-  );
+client.on("ready", () => {
+  console.log("Bot is ready!");
 });
 
-/* Load all events */
-fs.readdir("./events/", (_err, files) => {
-  files.forEach((file) => {
-    if (!file.endsWith(".js")) return;
-    const event = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
-    console.log(`👌 Event loaded: ${eventName}`);
-    client.on(eventName, event.bind(null, client));
-    delete require.cache[require.resolve(`./events/${file}`)];
-  });
-});
-
-// Login
-client.login(config.token);
+client.login(process.env.DISCORD_BOT_TOKEN);

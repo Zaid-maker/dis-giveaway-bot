@@ -1,6 +1,5 @@
 {
   "token": "Discord Bot Token",
-  "mongo_url": "Your connection string",
   "everyoneMention": false,
   "hostedBy": true
 }

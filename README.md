@@ -34,7 +34,7 @@ DisGiveawaysBot allows you to conduct giveaways in your discord server with ligh
 
 ## Custom/External Database setup
 
-- Read the [README](Database%20Examples/README.md) file and you are good to go to use custom db's.
+- Check the example folder to get the custom database examples
 
 ## Manual setup on local machine
 
