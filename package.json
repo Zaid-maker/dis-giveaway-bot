@@ -27,9 +27,6 @@
     "quickdb": "1.0.5",
     "quickmongo": "4.0.0"
   },
-  "engines": {
-    "node": "16.x"
-  },
   "devDependencies": {
     "nodemon": "^2.0.22"
   }
