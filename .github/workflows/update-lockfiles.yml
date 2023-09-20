@@ -1,0 +1,31 @@
+name: Update Lock Files and Commit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+
+jobs:
+  update-lock-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js (if applicable)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16 # Change to your desired Node.js version
+
+      - name: Install dependencies and update lock file
+        run: |
+          npm update
+
+      - name: Commit new data
+        uses: stefanzweifel/git-auto-commit-action@v4.15.4
+        with:
+          commit_message: ":arrow_up: Update `package-lock.json` to latest"
+          commit_user_name: Zaid-maker
+          commit_user_email: pzhafeez@gmail.com
+          commit_author: Zaid-maker <pzhafeez@gmail.com>
